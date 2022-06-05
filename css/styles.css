@@ -1,12 +1,67 @@
 :root {
   --main-color: #212121;
+  --first-color: #ffffff;
+  --second-color: #757575;
+  --accent-color: #2196f3;
+  --accent-btn-color: #2196f3;
+  --main-background: #ffffff;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+}
+im g {
+  display: block;
 }
 body {
   font-family: 'Roboto', sans-serif;
 }
-/*.header-list {
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.logo {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 93px;
+  margin-bottom: 20px;
+
+  font-family: ‘Raleway’, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  display: block;
+}
+.logo-accent {
+  color: #000;
+}
+.logo-accent-footer {
+  color: var(--first-color);
+}
+.header-list,
+.header-list-adress,
+.header-nav {
   display: flex;
-}*/
+  align-items: center;
+  justify-content: center;
+}
 .header-item-link,
 .header-mail-link,
 .header-tel-link {
@@ -17,10 +72,25 @@ body {
 }
 .header-item-link {
   color: var(--main-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
 }
+/*.header-item-link:last-child {
+  margin-right: 0px;
+}*/
 .header-mail-link,
 .header-tel-link {
-  color: #757575;
+  color: var(--second-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-mail-link {
+  margin-right: 50px;
 }
 .header-item-link:hover,
 .header-item-link:focus,
@@ -28,80 +98,109 @@ body {
 .header-mail-link:focus,
 .header-tel-link:hover,
 .header-tel-link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .hero {
   background: #2f303a;
+  padding: 200px 452px;
 }
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  color: #ffffff;
-  text-align: center;
+  color: var(--first-color);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .hero-button {
-  background: #2196f3;
+  background: var(--accent-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--first-color);
   border-style: none;
+  padding: 10px 32px;
+
+  margin: 0 auto;
 }
 .hero-button:hover {
   background: #188ce8;
 }
 .hero-button:focus {
-  background-color: #ffffff;
+  background-color: var(--main-background);
   color: #000;
 }
-/*.menu,
+.menu,
 .team-list,
 .about-list {
   display: flex;
-}*/
+}
+.menu {
+  margin-bottom: 50px;
+}
 .menu-btn {
+  border-radius: 4px;
+  padding: 6px 22px;
+  margin: 0 auto;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   background: #f5f4fa;
-  border-radius: 4px;
   border-style: none;
 }
+.menu-btm:not(:last-child) {
+  margin-right: 8px;
+}
 .menu-btn:hover {
-  background: #2196f3;
+  background: var(--accent-btn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: #ffffff;
+  color: var(--first-color);
 }
 button.current {
-  background: #2196f3;
-  color: #ffffff;
+  background: var(--accent-btn-color);
+  color: var(--first-color);
 }
 a.current {
-  color: #2196f3;
+  color: var(--accent-color);
+}
+.about-title {
+  margin-bottom: 10px;
+}
+.about-list {
+  display: inline-block;
 }
 .about-title,
 .team-header {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color);
+}
+.about-title-img {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: var(--main-color);
+  margin-bottom: 50px;
 }
 .about-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-color);
 }
 .about {
   font-weight: 700;
@@ -112,6 +211,14 @@ a.current {
 }
 .team {
   background: #f5f4fa;
+}
+.team-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.team-header {
+  margin-bottom: 50px;
 }
 .team-title {
   font-weight: 500;
@@ -125,10 +232,12 @@ a.current {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-color);
 }
 .footer {
   background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-link,
 .footer-link-adress {
@@ -139,30 +248,20 @@ a.current {
   font-style: normal;
 }
 .footer-link {
-  color: #ffffff;
+  color: var(--first-color);
+
+  margin-bottom: 9px;
 }
 .footer-link-adress {
   color: rgba(255, 255, 255, 0.6);
+
+  margin-bottom: 9px;
 }
 .footer-link:hover,
 .footer-link-adress:hover {
-  color: #2196f3;
+  color: var(--accent-color);
 }
-.logo {
-  font-family: ‘Raleway’, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #2196f3;
-}
-.logo-accent {
-  color: #000;
-}
-.logo-accent-footer {
-  color: #ffffff;
-}
+
 .header-portfolio,
 .header-item-portfolio,
 .header-mail-portfolio {
@@ -172,30 +271,39 @@ a.current {
   letter-spacing: 0.02em;
 }
 .header-item-portfolio {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .header-mail-portfolio {
-  color: #757575;
+  color: var(--second-color);
 }
 .main-portfolio .header-portfolio {
-  background: #ffffff;
+  background: var(--main-background);
 }
-/*.portfolio-list {
+.portfolio-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
-}*/
+}
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 .portfolio-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--second-color);
 }
 .list {
   list-style: none;
