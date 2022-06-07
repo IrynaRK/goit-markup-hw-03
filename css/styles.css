@@ -289,8 +289,8 @@ a.current {
   letter-spacing: 0.03em;
   color: var(--main-color);
 }
-.team-item {
-  width: calc((100%-30px) / 4);
+.team-list {
+  justify-content: space-between;
 }
 .team-text {
   font-weight: 400;
